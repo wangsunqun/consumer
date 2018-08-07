@@ -32,3 +32,17 @@ eureka:
 
 server:
   port: 8010
+
+#####rocket-mq######
+apache:
+  rocketmq:
+    consumer:
+      PushConsumer: victor_test
+      instacneName: victor_test_Consumer
+    producer:
+      producerGroup: victor_test_Producer
+      instacneName: victor_test_Producer
+    namesrvAddr: 47.100.249.163:9876
+    topic: VictorTest
+    tag: VictorTest
+#####rocket-mq######
