@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 @RestController
 public class UserController {
@@ -17,7 +15,7 @@ public class UserController {
 
     @RequestMapping("test")
     public UserDto test(@RequestParam("id") long id){
-//        return userInterface.getUserById(id);
-        return new UserDto(1, "111222333");
+        return userInterface.getUserById(id);
+//        return new UserDto(1, "111222333");
     }
 }
