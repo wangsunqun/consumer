@@ -1,6 +1,9 @@
 spring:
   application:
     name: consumer
+  ##### zipkin #####
+  zipkin:
+    base-url: http://127.0.0.1:12000
 
 feign:
   hystrix:
@@ -8,7 +11,7 @@ feign:
 
 #hystrix超时时间要大于ribbon超时时间
 hystrix:
-  command:
+  comman:
     default:
       execution:
         isolation:
