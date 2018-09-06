@@ -21,11 +21,14 @@ ribbon:
   ReadTimeout: 5000
   #  这里有个bug，此参数说转发到另一个节点重试，但是当只有一个节点时候会在这个节点再重试一遍
   MaxAutoRetriesNextServer: 0
+  ServerListRefreshInterval: 5000
 
 eureka:
   client:
     service-url:
       defaultZone : http://127.0.0.1:8761/eureka
+    registry-fetch-interval-seconds: 5
+
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
